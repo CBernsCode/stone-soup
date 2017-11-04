@@ -1,8 +1,6 @@
-
-<script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
-<script>
+import firebase from 'firebase'
   // Initialize Firebase
-  var config = {
+const config = {
     apiKey: "AIzaSyA4ZX2vIBTM3ch2lUNZFY1MMrCQSJR687s",
     authDomain: "stone-soup-cd649.firebaseapp.com",
     databaseURL: "https://stone-soup-cd649.firebaseio.com",
@@ -11,4 +9,4 @@
     messagingSenderId: "1081040749799"
   };
   firebase.initializeApp(config);
-</script>
+  export default firebase;
