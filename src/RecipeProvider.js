@@ -11,7 +11,7 @@ class RecipeProvider{
   getRecipe(id){
     return new Promise((resolve, reject) => {
       this.ref.child(id).once('value', (snapshot) => {resolve(snapshot.val())});
-    }).then((result) => {return result;});
+    });
 
   }
 

@@ -8,19 +8,10 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
 });
 
-function add(x, y){
-  return x + y;
-}
-
-it("add equals 4", () => {
-  expect(add(2,2)).toEqual(4);
-});
-
 /*
   Test RecipeProvider
-  (Currently not working)
 */
-/*
+
 var recipe = {
   title: "Pizza",
   id: 42,
@@ -38,8 +29,7 @@ var recipe = {
 
 it("getRecipe returns correct recipe", () => {
   var rProv = new RecipeProvider();
-  expect(() =>{
-    rProv.getRecipe("-Ky8MbZFcEOQjBD3dPwV").then((result) => {return result.title;});
-  }).toMatch("Pizza");
+  rProv.getRecipe("-Ky8MbZFcEOQjBD3dPwV").then((result) => {
+    expect(result.title).toMatch("Pizza");
+  });
 });
-*/
