@@ -142,6 +142,14 @@ class RecipeProvider{
   }
   */
 
+  getRecipesByIds(idArr){
+    var arr = [];
+    for(var i in idArr){
+      arr[i] = recipe[idArr[i]];
+    }
+    return arr;
+  }
+
 }
 
 export default RecipeProvider;
