@@ -7,12 +7,17 @@ import './App.css';
 
 import Footer from './Footer.js';
 import Header from './Header.js';
+<<<<<<< HEAD
 import Sidebar from './Sidebar.js'
+=======
+
+>>>>>>> a6472cde4a3738491d6e74285982378310d553c1
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+<<<<<<< HEAD
         <Header />
         <div>
           <Sidebar />
@@ -20,6 +25,19 @@ class App extends Component {
           <Chat messages={msgs}/>
           </div>
         <Footer />
+=======
+        <div className="col-sm-1"></div>
+        <Header />
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+        <Chat />
+        <Footer />
+        <div className="container">
+          <Recipes recipes={recipes}/>
+          <Chat messages={msgs}/>
+        </div>
+>>>>>>> a6472cde4a3738491d6e74285982378310d553c1
       </div>
     );
   }
@@ -35,8 +53,13 @@ var msgs = [{
 },
 {
   message: "Hello world",
+<<<<<<< HEAD
   time: "124"
 }
+=======
+}
+
+>>>>>>> a6472cde4a3738491d6e74285982378310d553c1
 ]
 
 var recipes = [

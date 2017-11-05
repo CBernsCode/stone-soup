@@ -42,4 +42,5 @@ class IngredientsSideBar extends Component{
     )
   }
 }
+
 export default Sidebar;
