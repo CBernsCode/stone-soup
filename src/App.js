@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Chat from './Chat.js';
 import Recipes from './Recipes.js';
+import firebase from './firebase.js';
 import './App.css';
 
 import Footer from './Footer.js';
@@ -44,7 +45,8 @@ var msgs = [{
 
 var recipes = [
   {
-    name: "Cake",
+    name: "Lobstah Roll",
+    img: "http://www.seriouseats.com/images/2016/12/20161208-sous-vide-lobster-59-lobster-roll-duo.jpg",
     ingredients: [
       {
         quantity: 2,
@@ -57,7 +59,8 @@ var recipes = [
     ]
   },
   {
-    name: "Eggs",
+    name: "Lobstah Roll",
+    img: "http://www.seriouseats.com/images/2016/12/20161208-sous-vide-lobster-59-lobster-roll-duo.jpg",
     ingredients: [
       {quantity: 2,
       name: "eggs"
@@ -65,7 +68,8 @@ var recipes = [
     ]
   },
   {
-    name: "Eggs",
+    name: "Lobstah Roll",
+    img: "http://www.seriouseats.com/images/2016/12/20161208-sous-vide-lobster-59-lobster-roll-duo.jpg",
     ingredients: [
       {quantity: 2,
       name: "eggs"
@@ -73,7 +77,8 @@ var recipes = [
     ]
   }
   ,{
-    name: "Eggs",
+    name: "Lobstah Roll",
+    img: "http://www.seriouseats.com/images/2016/12/20161208-sous-vide-lobster-59-lobster-roll-duo.jpg",
     ingredients: [
       {quantity: 2,
       name: "eggs"
