@@ -1,0 +1,13 @@
+#recipes {
+  text-align: left;
+  border: 1px solid;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+
+.recipe {
+  padding: 10px;
+}
+.recipe img{
+  width: 50%;
+}
