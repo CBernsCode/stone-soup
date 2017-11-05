@@ -1,0 +1,20 @@
+.page-header {
+	background-color: #388E3C;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	margin: 0;
+	padding: 1em 0;
+}
+
+.page-header h1 {
+	padding-left: .5em;
+	text-align: left;
+	font-family: "Lobster Two";
+	margin-top: 0;
+
+}
+
+.navbar-brand {
+	padding: 0 15px;
+}
