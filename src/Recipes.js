@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './Recipes.css'
+import firebase from './firebase.js';
 import RecipeProvider from './RecipeProvider.js'
 
 class Recipes extends Component{
 
   render(){
-
       return (
         <section  className="col-md-9">
             <h2>Recipes</h2>
             <div id="recipes">
-              
+
             </div>
         </section>
       )

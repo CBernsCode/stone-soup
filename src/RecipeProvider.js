@@ -100,7 +100,7 @@ class RecipeProvider{
     return recipe.slice(0, n);
     /*
     return new Promise((resolve, reject) => {
-      this.ref.limitToFirst(n).once('value', (snapshot) => {resolve(snapshot.val());});
+      this.ref.limitToFirst(n).on('value', (snapshot) => {resolve(snapshot.val());});
     });
     */
   }
