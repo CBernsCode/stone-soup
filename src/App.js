@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 
 import Chat from './Chat.js';
 import Recipes from './Recipes.js';
-import firebase from './firebase.js';
 import './App.css';
 import UserProvider from './UserProvider.js';
-import MessageProvider from './MessageProvider.js';
 import GroupProvider from './GroupProvider.js';
 import Footer from './Footer.js';
 import Header from './Header.js';

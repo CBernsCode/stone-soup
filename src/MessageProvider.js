@@ -24,7 +24,7 @@ class MessageProvider{
     }
 }
 
-var messages = 
+var messages =
      [
         {text: "Some message", time:""},
         {text: "Some message", time:""}
