@@ -15,13 +15,14 @@ import firebase from './firebase.js'
 
     var groups = [
         {
-            id: 0,
+            id: 1,
             users: [0,1],
             time: new Date(),
             host: 1,
-            currentRecipes: [0, 1, 2, 3],
+            currentRecipes: [0, 1, 2],
             pastRecipes: [],
-            pastMeetings: []
+            pastMeetings: [],
+            msgRef: 0
         }
     ]
 

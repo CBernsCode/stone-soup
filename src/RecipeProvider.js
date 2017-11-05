@@ -6,16 +6,16 @@ var recipe = [
     title: "Lobster Roll",
     ingredients: [
       {
-        quanitity: 1,
-        name: "bread"
+        quantity: 8,
+        name: "hot dog rolls"
       },
       {
-        quanitity: 1,
-        name: "lobster"
+        quantity: 1,
+        name: "lb lobster"
       },
       {
-        quanitity: 1,
-        name: "mayonnaise"
+        quantity: 1,
+        name: "cup mayonnaise"
       }
     ],
     img: "http://www.seriouseats.com/images/2016/12/20161208-sous-vide-lobster-59-lobster-roll-duo.jpg",
@@ -37,7 +37,7 @@ var recipe = [
       },
       {
         quantity: 1,
-        name: "ground beef"
+        name: "lb ground beef"
       }
     ],
     img: "https://assets.epicurious.com/photos/578d20a00103fcdb27360fe8/master/pass/beef-and-bean-chili.jpg",
@@ -61,7 +61,7 @@ var recipe = [
       },
       {
         quantity: 1,
-        name: "American Cheese"
+        name: "slice of American Cheese"
       }
     ],
     img: "https://www.incredibleegg.org/wp-content/uploads/basic-french-omelet-930x550.jpg",

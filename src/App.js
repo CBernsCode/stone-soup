@@ -7,10 +7,6 @@ import './App.css';
 import UserProvider from './UserProvider.js';
 import MessageProvider from './MessageProvider.js';
 import GroupProvider from './GroupProvider.js';
-
-
-
-
 import Footer from './Footer.js';
 import Header from './Header.js';
 import Sidebar from './Sidebar.js'
@@ -26,8 +22,8 @@ class App extends Component {
         <div>
           <Sidebar users={group.users}/>
           <GroupInfo host={group.host} time={group.time} />
-          <Recipes recipes={recipes}/> 
-          <Chat messages={msgs}/>
+          <Recipes recipes={group.currentRecipes}/> 
+          <Chat msgGroup={group.msgRef}/>
           </div>
         <Footer />
       </div>
