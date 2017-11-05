@@ -1,0 +1,20 @@
+  #LandingHeader{
+    font-size: 5em;
+    color: #388E3C;
+    padding: 1em;
+  }
+
+  #LandingPurpose {
+    padding-top: 50px;
+    min-height: 100vh;
+  }
+
+  #LandingBenefits {
+    padding-top: 50px;
+    min-height: 100vh;
+  }
+
+  #LandingBusiness {
+    padding-top: 50px;
+    min-height: 100vh;
+  }
