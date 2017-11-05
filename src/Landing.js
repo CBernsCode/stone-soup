@@ -13,7 +13,7 @@ class Landing extends Component {
             <div className="row">
             <div className="col-md-8">
               <div id="LandingHeader">Stone Soup</div> <hr/>
-              <div id="LandingText">Welcome! This is Stone Soup, a group food prep app.</div>
+              <div id="LandingText">Welcome!<br/>Stone Soup is a web application that helps encourage a collaborative approach to meal preparation.  The platform offers an interface that helps people work together in organizing the various aspects involved with cooking a communal meal. This includes everything from choosing recipes that match the preferences of the members in the group, to acquiring the right ingredients, as well as cooking and cleaning.</div>
             </div>
               <div className="col-md-4">
                 <img className="img-responsive img-rounded" alt="image from https://img.huffingtonpost.com/" src="https://img.huffingtonpost.com/asset/585be1aa1600002400bdf2a6.jpeg?ops=scalefit_970_noupscale" />
