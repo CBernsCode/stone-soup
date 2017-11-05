@@ -21,7 +21,7 @@
 var users = [
     {
         name: "Chris Berns",
-        id: 1,
+        id: 0,
         prefs: {
             spicy: "true",
         },
@@ -36,7 +36,7 @@ var users = [
     },
     {
         name: "Marvin Fung",
-        id: 2,
+        id: 1,
         prefs: {
             spicy: "true",
         },
@@ -47,6 +47,22 @@ var users = [
             city: "Brocktown",
             address: "9 Mainn St",
             zip: "01360"
+        }
+    },
+    {
+        name: "Amy Mazzucotelli",
+        id: 2,
+        prefs: {
+            spicy: "true",
+            breakfast: "true"
+        },
+        bio: "I like sleep",
+        allergies: ["pseudo milk"],
+        location: {
+            state: "Ma",
+            city: "Westford",
+            address: "9 Broadway St",
+            zip: "321312"
         }
     }
 ]

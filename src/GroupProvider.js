@@ -16,7 +16,7 @@ import firebase from './firebase.js'
     var groups = [
         {
             id: 1,
-            users: [0,1],
+            users: [0,1,2],
             time: new Date(),
             host: 1,
             currentRecipes: [0, 1, 2, 3],
