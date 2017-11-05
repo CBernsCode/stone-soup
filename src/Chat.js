@@ -37,9 +37,8 @@ class Chat extends Component{
   render(){
     if(this.state.messages){
       return (
-        <section  className="">
+        <div id="chat">
           <h2>Chat</h2>
-          <div id="chat">
           <ul>
             {
               this.state.messages.map((x) => {
@@ -48,17 +47,17 @@ class Chat extends Component{
           </ul>
           <div class="form-group">
             <form className="form-horizontal" onSubmit={this.handleSubmit}>
-            <label for="chat-input"className="col-sm-2 control-label">
+            <label for="chat-input"className="col-sm-3 control-label">
               Send a Message:
             </label>
-            <div className="col-sm-9">
+            <div className="col-sm-8 text-box">
               <input  id="chat-input" type="text" value={this.state.value} onChange={this.handleChange} />
             </div>
             <button type="submit" class="btn btn-success"><i className="glyphicon glyphicon-send"></i></button>
             </form> 
           </div>
-          </div>
-        </section>
+        </div>
+
       )
     }else {
       return (
