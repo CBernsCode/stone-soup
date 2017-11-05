@@ -1,0 +1,9 @@
+#chat {
+  text-align: left;
+  border: 1px solid;
+}
+
+#chat ul{
+  list-style: none;
+  padding-left: 0;
+}
