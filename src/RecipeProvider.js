@@ -10,16 +10,18 @@ class RecipeProvider{
   // Returns a Promise
   getRecipe(id){
     return new Promise((resolve, reject) => {
-      this.ref.child(id).once('value', (snapshot) => {resolve(snapshot.val())});
+      this.ref.child(id).once('value', (snapshot) => {resolve(snapshot.val());});
     });
   }
 
   // Gets n recipes
-  /*
+  // Returns a Promise
   getSomeRecipes(n){
-
+    return new Promise((resolve, reject) => {
+      this.ref.limitToFirst(n).once('value', (snapshot) => {resolve(snapshot.val());});
+    });
   }
-  */
+
 
   // Send a recipe to the database
   // Returns Firebase's randomly generated key

@@ -35,3 +35,10 @@ it("getRecipe returns correct recipe", () => {
     expect(temp).toMatch("Spicy Chili");
   });
 });
+
+it("getSomeRecipes returns something", () => {
+  var rProv = new RecipeProvider;
+  rProv.getSomeRecipes(5).then((result) => {
+    expect(temp).toBeDefined();
+  });
+});
