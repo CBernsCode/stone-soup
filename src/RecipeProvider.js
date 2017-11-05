@@ -6,23 +6,33 @@ class RecipeProvider{
     this.ref = firebase.database().ref('recipe');
   }
 
-  // get recipe from database by ID
-  // returns a promise
+  // Get recipe from database by ID
+  // Returns a Promise
   getRecipe(id){
     return new Promise((resolve, reject) => {
       this.ref.child(id).once('value', (snapshot) => {resolve(snapshot.val())});
     });
-
   }
 
-  // send a recipe to the database
+  // Gets n recipes
+  /*
+  getSomeRecipes(n){
+
+  }
+  */
+
+  // Send a recipe to the database
+  // Returns Firebase's randomly generated key
   sendRecipe(item){
-    this.ref.push(item);
+    var saveRef = this.ref.push(item);
+    var recipeKey = saveRef.key;
+    console.log("Pushed recipe: " + recipeKey);
+    return recipeKey;
   }
 
   // delete recipe by ID
-  deleteRecipe(itemID){
-    this.ref.child(itemID).remove();
+  deleteRecipe(id){
+    this.ref.child(id).remove();
   }
 
 }
