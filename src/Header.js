@@ -6,15 +6,10 @@ class Header extends Component {
   render() {
     return(
       <div className="page-header">
-      <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet" />
         <a className="navbar-brand" href="#">
-          <div className="col-sm-1"></div>
-          <div className="col-sm-10">
-            <img alt="Brand" src={logo} class="center-block" />
-          </div>
-          <div className="col-sm-1"></div>
+          <img alt="Brand" src={logo} />
         </a>
-        <h1>STONE SOUP</h1>
+        <h1>Stone Soup</h1>
       </div>
     );
   }
