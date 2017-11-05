@@ -4,10 +4,7 @@ import firebase from './firebase.js';
 import RecipeProvider from './RecipeProvider.js'
 
 class Recipes extends Component{
-  constructor(props) {
-    super(props);
-    this.state = { recipes: [] }; // <- set up react state
-  }
+
   render(){
       return (
         <section  className="col-md-9">
