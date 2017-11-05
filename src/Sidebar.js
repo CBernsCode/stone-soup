@@ -24,9 +24,9 @@ class UserSideBar extends Component{
         <h3>Users</h3> 
         <ul className="list-group ">
           {
-            users.map((usr) => {
+            users.map((usr, index) => {
               return (
-                <User key={usr.id} name={usr.name} />
+                <User key={index} name={usr.name} />
               )
             })
           }

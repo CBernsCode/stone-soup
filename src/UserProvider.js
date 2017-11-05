@@ -1,9 +1,5 @@
-import firebase from './firebase.js'
 
     class UserProvider{
-        constructor(){     
-            this.ref = firebase.database().ref('user/');
-        }
         getUser(id){
             return users[id];
         }

@@ -15,7 +15,6 @@ class App extends Component {
   render() {
     const gProv = new GroupProvider();
     var group = gProv.getGroup(0);
-    console.log(group)
     return (
       <div className="App">
         <Header />
@@ -23,7 +22,7 @@ class App extends Component {
           <Sidebar users={group.users}/>
           <GroupInfo host={group.host} time={group.time} />
           <Recipes recipes={group.currentRecipes}/> 
-          <Chat msgGroup={group.msgRef}/>
+          <Chat currUser={group.host} msgGroup={group.msgRef}/>
           </div>
         <Footer />
       </div>
@@ -49,63 +48,5 @@ class GroupInfo extends Component {
     )
   }
 }
-
-var msgs = [{
-  message: "Hello world",
-  time: "123"
-},
-{
-  message: "Hello world",
-  time: "124"
-},
-{
-  message: "Hello world",
-  time: "124"
-}
-]
-
-var recipes = [
-  {
-    name: "Lobstah Roll",
-    img: "http://www.seriouseats.com/images/2016/12/20161208-sous-vide-lobster-59-lobster-roll-duo.jpg",
-    ingredients: [
-      {
-        quantity: 2,
-        name: "eggs"
-      },
-      {
-        quantity: "3lbs",
-        name: "Flour"
-      }
-    ]
-  },
-  {
-    name: "Lobstah Roll",
-    img: "http://www.seriouseats.com/images/2016/12/20161208-sous-vide-lobster-59-lobster-roll-duo.jpg",
-    ingredients: [
-      {quantity: 2,
-      name: "eggs"
-      }
-    ]
-  },
-  {
-    name: "Lobstah Roll",
-    img: "http://www.seriouseats.com/images/2016/12/20161208-sous-vide-lobster-59-lobster-roll-duo.jpg",
-    ingredients: [
-      {quantity: 2,
-      name: "eggs"
-      }
-    ]
-  }
-  ,{
-    name: "Lobstah Roll",
-    img: "http://www.seriouseats.com/images/2016/12/20161208-sous-vide-lobster-59-lobster-roll-duo.jpg",
-    ingredients: [
-      {quantity: 2,
-      name: "eggs"
-      }
-    ]
-  }
-]
 
 export default App;

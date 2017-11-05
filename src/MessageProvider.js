@@ -1,29 +1,25 @@
 import firebase from './firebase.js'
-
+import UserProvider from './UserProvider.js'
 
 
 class MessageProvider{
-    constructor(){
-        
-    }
+
     getMessage(id, msgId){
         return messages[id][msgId];
-    }
-    getMessages(id){
-        const thisRef = firebase.database().ref(`/messages/${id}`)
-        thisRef.once('value').then((datasnapshot) => {
-            return datasnapshot.val();
-        })
-
     }
     newMsgGroup(id){
         messages.push(id)
         messages[id].push([])
     }
-    sendMessage(id, msg){
+    sendMessage(id, msg, userId){
         const msgRef = firebase.database().ref(`/messages/${id}`)
-        let time = new Date().toISOString()
+        let time = new Date()
+        time = (time.getMonth() + 1) + "/" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
         msg.time = time;
+        let uProv = new UserProvider();
+        let user = uProv.getUser(userId).name;
+        console.log(user)
+        msg.user = user;
         msgRef.push(msg)
     }
 }

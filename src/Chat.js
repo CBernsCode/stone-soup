@@ -3,14 +3,15 @@ import MessageProvider from './MessageProvider.js'
 import firebase from './firebase.js'
 import './Chat.css';
 
-class Chat extends Component{
-  constructor(props){
-    super(props);
-    this.state = {value: '', messages:[]};
+const mProv = new MessageProvider()
+mProv.sendMessage(0, {text: "Hello World"}, 0)
 
+class Chat extends Component{
+  constructor(){
+    super();
+    this.state = {value: '', messages:[]};
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    
   }
   handleChange(e) {
     this.setState({value: e.target.value});
@@ -18,16 +19,25 @@ class Chat extends Component{
   handleSubmit(e){
     e.preventDefault();
     const mProv = new MessageProvider();
-    mProv.sendMessage(this.props.msgGroup, {text: this.state.value})
+    mProv.sendMessage(this.props.msgGroup, {text: this.state.value}, this.props.currUser)
+    this.setState({value: ""})
   }
-  componentDidMount(){
-    const thisRef = firebase.database().ref(`/messages/${this.props.msgRef}`)
-    thisRef.once('value').then((datasnapshot) => {
-        this.setState({messages: datasnapshot.val()});
-    })
+  componentWillMount(){
+    const itemsRef = firebase.database().ref(`/messages/${this.props.msgGroup}`)
+    itemsRef.on('value', (snapshot) => {
+      let items = snapshot.val();
+      console.log(items);
+      let newState = [];
+      for (let item in items) {
+        newState.push({ key: item,
+                        text: items[item].text, 
+                        time: items[item].time,
+                        user: items[item].user});
+      }
+      this.setState({messages: newState});
+    }).bind(this);
   }
   render(){
-    console.log(this.state.messages)
     if(this.state.messages){
       return (
         <section  className=" col-md-offset-3 col-md-9">
@@ -36,7 +46,7 @@ class Chat extends Component{
           <ul>
             {
               this.state.messages.map((x) => {
-                return(<Message time={x.time} msg={x.text} />)
+                return(<Message key={x.key} time={x.time} msg={x.text} user={x.user} />)
             })}
           </ul>
           <form onSubmit={this.handleSubmit}>
@@ -71,7 +81,9 @@ class Chat extends Component{
 class Message extends Component{
   render(){
     return(
-      <li data={this.props.time}>{this.props.msg}</li>
+      <li data={this.props.time}>{this.props.user}: {this.props.msg}
+        <br/> <span className="chatTimeStamp"> {this.props.time}</span>
+      </li>
     )
   }
 }
