@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Chat from './Chat.js';
 import Recipes from './Recipes.js';
 import './App.css';
@@ -17,12 +16,12 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="col-md-3">
-        <Sidebar users={group.users} recipes={group.currentRecipes}/>
+          <Sidebar users={group.users} recipes={group.currentRecipes}/>
         </div>
         <div className="col-md-9">
-        <GroupInfo host={group.host} time={group.time} />
-        <Recipes recipes={group.currentRecipes}/> 
-        <Chat currUser={group.host} msgGroup={group.msgRef}/>
+          <GroupInfo host={group.host} time={group.time} />
+          <Recipes recipes={group.currentRecipes}/> 
+          <Chat currUser={group.host} msgGroup={group.msgRef}/>
         </div>
         <Footer />
       </div>
