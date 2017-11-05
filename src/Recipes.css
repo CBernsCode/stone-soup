@@ -1,13 +1,17 @@
 #recipes {
   text-align: left;
   border: 1px solid;
-  padding-bottom: 2em;
   margin-bottom: 2em;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-flow: wrap;
 }
 
 .recipe {
   padding: 10px;
+  max-width: 250px;
 }
 .recipe img{
-  width: 50%;
+  max-width: 100%;
 }

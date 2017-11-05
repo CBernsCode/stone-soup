@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import logo from './logo.png';
 import './Header.css';
 
 class Header extends Component {
   render() {
     return(
       <div className="page-header">
-        <div className="col-sm-1"></div>
+        <a className="navbar-brand" href="#">
+          <img alt="Brand" src={logo} />
+        </a>
         <h1>Stone Soup</h1>
       </div>
     );

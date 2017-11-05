@@ -21,17 +21,15 @@ var obj = [
 class Recipes extends Component{
   render(){
     return (
-      <section id="recipes" className="row">
-        <div className="col-md-10">
+      <section  className="col-md-9">
           <h2>Recipes</h2>
-          <div className="row">
-          {this.props.recipes.map((x) => {
-            return (
-              <Recipe img={x.img} name={x.name} ingredients={x.ingredients}/>
-            )
-          })}
+          <div id="recipes">
+            {this.props.recipes.map((x) => {
+              return (
+                <Recipe img={x.img} name={x.name} ingredients={x.ingredients}/>
+              )
+            })}
           </div>
-        </div>
       </section>
     )
   }

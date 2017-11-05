@@ -1,6 +1,7 @@
 #chat {
   text-align: left;
   border: 1px solid;
+  margin-bottom: 10rem;
 }
 
 #chat ul{

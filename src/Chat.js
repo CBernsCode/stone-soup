@@ -4,12 +4,12 @@ import './Chat.css';
 class Chat extends Component{
   render(){
     return (
-      <section id="chat" className="row">
-        <div className="col-md-10">
+      <section  className="clearfix col-md-offset-3 col-md-9">
         <h2>Chat</h2>
+        <div id="chat">
         <ul>
           {this.props.messages.map((x) => {
-            return(<Message time= {x.time} msg={x.message} />)
+            return(<Message time={x.time} msg={x.message} />)
           })}
         </ul>
         <form>
