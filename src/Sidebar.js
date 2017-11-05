@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UserProvider from './UserProvider.js'
+import RecipeProvider from './RecipeProvider.js'
 import './Sidebar.css';
 
 class Sidebar extends Component {
@@ -7,7 +8,7 @@ class Sidebar extends Component {
     return (
       <div id="sidebar" className="col-md-3">
         <UserSideBar users={this.props.users} />
-        <IngredientsSideBar />
+        <IngredientsSideBar recipe={this.props.recipes}/>
       </div>
     )
   }
@@ -45,16 +46,42 @@ class User extends Component {
 }
 
 class IngredientsSideBar extends Component{
+  
   render(){
+    var rProv = new RecipeProvider();
+    var recipes = rProv.getIngredients(this.props.recipe)
+    var list = []
+    recipes.map((x) =>{
+      x.map((y) => {
+        console.log(y)
+        list.push({
+          quantity: y.quantity,
+          name: y.name
+        })
+      })
+    })
+    console.log(list)
     return (
       <div> 
         <h3>Shopping List</h3>
         <ul className="list-group "> 
-          <li className="list-group-item list-group-item-danger">Item<span class="badge">4</span></li>
-          <li className="list-group-item list-group-item-info">Item</li>
-          <li className="list-group-item list-group-item-success">Item</li>
+          {
+            list.map((x) => {
+              return(
+                <ShoppingItem quantity={x.quantity} name={x.name} />
+              )
+            })
+          }
         </ul>
       </div>
+    )
+  }
+}
+
+class ShoppingItem extends Component{
+  render(){
+    return (
+      <li className="list-group-item"><span class="badge">{this.props.quantity}</span>{this.props.name}</li> 
     )
   }
 }

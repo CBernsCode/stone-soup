@@ -150,6 +150,15 @@ class RecipeProvider{
     return arr;
   }
 
+  getIngredients(idArr){
+    var arr = [];
+    for(var i in idArr){
+      arr.push(recipe[i].ingredients);
+    }
+    console.log(arr)
+    return arr;
+  }
+
 }
 
 export default RecipeProvider;

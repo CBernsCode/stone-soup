@@ -2,10 +2,18 @@
   text-align: left;
   border: 1px solid;
   margin-bottom: 10rem;
-
+  
 }
 
 #chat ul{
   list-style: none;
   padding-left: 0;
+  max-height: 20em;
+  overflow: scroll;
+  display: flex;  
+  flex-direction: column-reverse;
+  font-size: 120%;
+}
+#chat ul span {
+  font-size: 80%;
 }

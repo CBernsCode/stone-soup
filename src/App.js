@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div>
-          <Sidebar users={group.users}/>
+          <Sidebar users={group.users} recipes={group.currentRecipes}/>
           <GroupInfo host={group.host} time={group.time} />
           <Recipes recipes={group.currentRecipes}/> 
           <Chat currUser={group.host} msgGroup={group.msgRef}/>

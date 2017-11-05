@@ -6,6 +6,7 @@ import './Chat.css';
 const mProv = new MessageProvider()
 mProv.sendMessage(0, {text: "Hello World"}, 0)
 
+
 class Chat extends Component{
   constructor(){
     super();
@@ -80,6 +81,7 @@ class Chat extends Component{
 
 class Message extends Component{
   render(){
+    
     return(
       <li data={this.props.time}>{this.props.user}: {this.props.msg}
         <br/> <span className="chatTimeStamp"> {this.props.time}</span>
