@@ -18,7 +18,6 @@ class MessageProvider{
         msg.time = time;
         let uProv = new UserProvider();
         let user = uProv.getUser(userId).name;
-        console.log(user)
         msg.user = user;
         msgRef.push(msg)
     }

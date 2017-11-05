@@ -1,7 +1,10 @@
 #chat {
   text-align: left;
   border: 1px solid;
+  border-radius: 5px;
   margin-bottom: 10rem;
+  padding: 0 2em;
+  
   
 }
 
@@ -14,6 +17,15 @@
   flex-direction: column-reverse;
   font-size: 120%;
 }
+
 #chat ul span {
   font-size: 80%;
+}
+
+#chat-input {
+  width: 100%;
+}
+
+#chat-input label input{
+  width: 100%;
 }

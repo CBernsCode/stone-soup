@@ -6,7 +6,7 @@ import './Sidebar.css';
 class Sidebar extends Component {
   render() {
     return (
-      <div id="sidebar" className="col-md-3">
+      <div id="sidebar">
         <UserSideBar users={this.props.users} />
         <IngredientsSideBar recipe={this.props.recipes}/>
       </div>
@@ -14,15 +14,13 @@ class Sidebar extends Component {
   }
 }
 
-
 class UserSideBar extends Component{
   render(){
    var uProv = new UserProvider();
    var users = uProv.getUsersByIds(this.props.users)
-   console.log(this.props.users)
     return (
       <div >
-        <h3>Users</h3> 
+        <h3>Users <span className="small">aka Thunder Buddies</span></h3>
         <ul className="list-group ">
           {
             users.map((usr, index) => {
@@ -53,14 +51,12 @@ class IngredientsSideBar extends Component{
     var list = []
     recipes.map((x) =>{
       x.map((y) => {
-        console.log(y)
         list.push({
           quantity: y.quantity,
           name: y.name
         })
       })
     })
-    console.log(list)
     return (
       <div> 
         <h3>Shopping List</h3>

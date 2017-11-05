@@ -16,12 +16,14 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <div>
-          <Sidebar users={group.users} recipes={group.currentRecipes}/>
-          <GroupInfo host={group.host} time={group.time} />
-          <Recipes recipes={group.currentRecipes}/> 
-          <Chat currUser={group.host} msgGroup={group.msgRef}/>
-          </div>
+        <div className="col-md-3">
+        <Sidebar users={group.users} recipes={group.currentRecipes}/>
+        </div>
+        <div className="col-md-9">
+        <GroupInfo host={group.host} time={group.time} />
+        <Recipes recipes={group.currentRecipes}/> 
+        <Chat currUser={group.host} msgGroup={group.msgRef}/>
+        </div>
         <Footer />
       </div>
     );
@@ -35,13 +37,13 @@ class GroupInfo extends Component {
   }
   _getHost(){
     var uProv = new UserProvider();
-    return (<h3>Host: {uProv.getUser(this.props.host).name}</h3>)
+    return (<h4>Host: {uProv.getUser(this.props.host).name}</h4>)
   }
   render(){
     return (
-      <div>
-        {this.getHost()}
+      <div id="group-info">
         <h3>Next Soup Group: {this.props.time.toString()}</h3>
+        {this.getHost()}
       </div>
     )
   }
