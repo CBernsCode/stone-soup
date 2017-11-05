@@ -4,6 +4,12 @@ import Chat from './Chat.js';
 import Recipes from './Recipes.js';
 import firebase from './firebase.js';
 import './App.css';
+import UserProvider from './UserProvider.js';
+import MessageProvider from './MessageProvider.js';
+import GroupProvider from './GroupProvider.js';
+
+
+
 
 import Footer from './Footer.js';
 import Header from './Header.js';
@@ -11,6 +17,7 @@ import Sidebar from './Sidebar.js'
 
 class App extends Component {
   render() {
+
     return (
       <div className="App">
         <Header />

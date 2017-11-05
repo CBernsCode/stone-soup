@@ -13,23 +13,32 @@ it('renders without crashing', () => {
 */
 
 var recipe = {
-  title: "Pizza",
-  id: 42,
+  title: "Spicy Chili",
   ingredients: [
     {
-      quantity: 1,
-      name: "cheese"
+      quantity: 99,
+      name: "jalapenos"
     },
     {
       quantity: 1,
-      name: "dough"
+      name: "ground beef"
     }
   ]
 };
 
 it("getRecipe returns correct recipe", () => {
   var rProv = new RecipeProvider();
-  rProv.getRecipe("-Ky8MbZFcEOQjBD3dPwV").then((result) => {
-    expect(result.title).toMatch("Pizza");
+  var newRecipe = rProv.sendRecipe(recipe);
+  rProv.getRecipe(newRecipe).then((result) => {
+    var temp = result.title;
+    rProv.deleteRecipe(newRecipe);
+    expect(temp).toMatch("Spicy Chili");
+  });
+});
+
+it("getSomeRecipes returns something", () => {
+  var rProv = new RecipeProvider;
+  rProv.getSomeRecipes(5).then((result) => {
+    expect(temp).toBeDefined();
   });
 });
