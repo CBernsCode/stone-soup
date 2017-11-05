@@ -18,6 +18,7 @@ import firebase from './firebase.js'
             for(var i in idArr){
                 retVal.push(users[i]);
             }
+            return retVal;
         }
     }
 

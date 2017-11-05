@@ -6,7 +6,7 @@ class Sidebar extends Component {
   render() {
     return (
       <div id="sidebar" className="col-md-3">
-        <UserSideBar />
+        <UserSideBar users={this.props.users} />
         <IngredientsSideBar />
       </div>
     )
@@ -17,7 +17,8 @@ class Sidebar extends Component {
 class UserSideBar extends Component{
   render(){
    var uProv = new UserProvider();
-   var users = uProv.getAll()
+   var users = uProv.getUsersByIds(this.props.users)
+   console.log(this.props.users)
     return (
       <div >
         <h3>Users</h3> 

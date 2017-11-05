@@ -17,18 +17,40 @@ import Sidebar from './Sidebar.js'
 
 class App extends Component {
   render() {
-
+    const gProv = new GroupProvider();
+    var group = gProv.getGroup(0);
+    console.log(group)
     return (
       <div className="App">
         <Header />
         <div>
-          <Sidebar />
+          <Sidebar users={group.users}/>
+          <GroupInfo host={group.host} time={group.time} />
           <Recipes recipes={recipes}/> 
           <Chat messages={msgs}/>
           </div>
         <Footer />
       </div>
     );
+  }
+}
+
+class GroupInfo extends Component {
+  constructor() {
+    super();
+    this.getHost = this._getHost.bind(this);
+  }
+  _getHost(){
+    var uProv = new UserProvider();
+    return (<h3>Host: {uProv.getUser(this.props.host).name}</h3>)
+  }
+  render(){
+    return (
+      <div>
+        {this.getHost()}
+        <h3>Next Soup Group: {this.props.time.toString()}</h3>
+      </div>
+    )
   }
 }
 

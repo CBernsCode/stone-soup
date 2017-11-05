@@ -5,14 +5,24 @@ import firebase from './firebase.js'
             this.ref = firebase.database().ref('group/')
         }
         getGroup(id){
-            return new Promise((resolve, reject) => {
-                var newref = this.ref.child(id);
-                newref.once('value', snap => {resolve(snap.val())});    
-            });
+            return groups[id]
         }
-        sendGroup(id){
-            this.ref.push(id);
+        sendGroup(group){
+            group.id = groups.length
+            groups.push(group)
         }
     }
+
+    var groups = [
+        {
+            id: 0,
+            users: [0,1],
+            time: new Date(),
+            host: 1,
+            currentRecipes: [0, 1, 2, 3],
+            pastRecipes: [],
+            pastMeetings: []
+        }
+    ]
 
 export default  GroupProvider;
