@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import Chat from './Chat.js';
 import Recipes from './Recipes.js';
 import firebase from './firebase.js';
@@ -7,12 +7,25 @@ import './App.css';
 
 import Footer from './Footer.js';
 import Header from './Header.js';
+<<<<<<< HEAD
+import Sidebar from './Sidebar.js'
+=======
 
+>>>>>>> a6472cde4a3738491d6e74285982378310d553c1
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+<<<<<<< HEAD
+        <Header />
+        <div>
+          <Sidebar />
+          <Recipes recipes={recipes}/> 
+          <Chat messages={msgs}/>
+          </div>
+        <Footer />
+=======
         <div className="col-sm-1"></div>
         <Header />
         <p className="App-intro">
@@ -24,6 +37,7 @@ class App extends Component {
           <Recipes recipes={recipes}/>
           <Chat messages={msgs}/>
         </div>
+>>>>>>> a6472cde4a3738491d6e74285982378310d553c1
       </div>
     );
   }
@@ -39,8 +53,13 @@ var msgs = [{
 },
 {
   message: "Hello world",
+<<<<<<< HEAD
+  time: "124"
+}
+=======
 }
 
+>>>>>>> a6472cde4a3738491d6e74285982378310d553c1
 ]
 
 var recipes = [
