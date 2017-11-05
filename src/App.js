@@ -5,17 +5,21 @@ import Recipes from './Recipes.js';
 import firebase from './firebase.js';
 import './App.css';
 
+import Footer from './Footer.js';
+import Header from './Header.js';
+
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Stone Soup</h1>
-        </header>
+        <div className="col-sm-1"></div>
+        <Header />
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Chat />
+        <Footer />
         <div className="container">
           <Recipes recipes={recipes}/>
           <Chat messages={msgs}/>
