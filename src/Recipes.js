@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Recipes.css'
-//import firebase from './firebase.js';
 import RecipeProvider from './RecipeProvider.js'
 
 class Recipes extends Component{
@@ -10,12 +9,11 @@ class Recipes extends Component{
     var recipes = rProv.getRecipesByIds(this.props.recipes)
     console.log(recipes)
       return (
-        <section  className="col-md-9">
+        <section  className="">
             <h2>Recipes</h2>
             <div id="recipes">
               {
                 recipes.map((x) => {
-                  console.log(x);
                   return(
                     <Recipe img={x.img} title={x.title} alt={x.title} ingredients={x.ingredients}
                     instructions={x.instructions}

@@ -1,5 +1,7 @@
 #sidebar {
   font-size: 130%;
+
+  margin-right: 1em;
 }
 
 .list-group-item > .badge {

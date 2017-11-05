@@ -1,6 +1,3 @@
-//import firebase from './firebase.js';
-
-// some recipes
 var recipe = [
   {
     title: "Lobster Roll",
@@ -79,47 +76,21 @@ var recipe = [
 ];
 
 class RecipeProvider{
-/*
-  constructor(){
-    this.ref = firebase.database().ref('recipe');
-  }
-*/
+
 
   // Get recipe from index
   getRecipe(id){
     return recipe[id];
-    /*
-    return new Promise((resolve, reject) => {
-      this.ref.child(id).once('value', (snapshot) => {resolve(snapshot.val());});
-    });
-    */
   }
 
   // Gets n recipes
   getSomeRecipes(n){
     return recipe.slice(0, n);
-    /*
-    return new Promise((resolve, reject) => {
-      this.ref.limitToFirst(n).on('value', (snapshot) => {resolve(snapshot.val());});
-    });
-    */
   }
 
   // Gets imageURL from ID
   getImageURL(id){
     return recipe[id].img;
-    /*
-    return new Promise((resolve, reject) => {
-      this.ref.child(id).once('value', (snapshot) => {
-        if(snapshot.val().imageURL){
-          resolve(snapshot.val().imageURL);
-        } else {
-          // no image URL found, set to Lobster Roll
-          resolve("http://www.seriouseats.com/images/2016/12/20161208-sous-vide-lobster-59-lobster-roll-duo.jpg");
-        }
-      }
-    )});
-    */
   }
 
 
@@ -127,20 +98,7 @@ class RecipeProvider{
   // Returns Firebase's randomly generated key
   sendRecipe(item){
     recipe.push(item);
-    /*
-    var saveRef = this.ref.push(item);
-    var recipeKey = saveRef.key;
-    console.log("Pushed recipe: " + recipeKey);
-    return recipeKey;
-    */
   }
-
-  // delete recipe by ID
-  /*
-  deleteRecipe(id){
-    this.ref.child(id).remove();
-  }
-  */
 
   getRecipesByIds(idArr){
     var arr = [];
@@ -155,7 +113,6 @@ class RecipeProvider{
     for(var i in idArr){
       arr.push(recipe[i].ingredients);
     }
-    console.log(arr)
     return arr;
   }
 
