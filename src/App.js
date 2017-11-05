@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 import Chat from './Chat.js';
 import Recipes from './Recipes.js';
-import firebase from './firebase.js';
+//import firebase from './firebase.js';
 import './App.css';
 import UserProvider from './UserProvider.js';
-import MessageProvider from './MessageProvider.js';
+//import MessageProvider from './MessageProvider.js';
 import GroupProvider from './GroupProvider.js';
 import Footer from './Footer.js';
 import Header from './Header.js';
@@ -22,7 +22,7 @@ class App extends Component {
         <div>
           <Sidebar users={group.users}/>
           <GroupInfo host={group.host} time={group.time} />
-          <Recipes recipes={group.currentRecipes}/> 
+          <Recipes recipes={group.currentRecipes}/>
           <Chat msgGroup={group.msgRef}/>
           </div>
         <Footer />
@@ -50,6 +50,7 @@ class GroupInfo extends Component {
   }
 }
 
+/*
 var msgs = [{
   message: "Hello world",
   time: "123"
@@ -63,6 +64,7 @@ var msgs = [{
   time: "124"
 }
 ]
+
 
 var recipes = [
   {
@@ -107,5 +109,6 @@ var recipes = [
     ]
   }
 ]
+*/
 
 export default App;

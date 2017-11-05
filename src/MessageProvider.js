@@ -3,9 +3,7 @@ import firebase from './firebase.js'
 
 
 class MessageProvider{
-    constructor(){
-        
-    }
+
     getMessage(id, msgId){
         return messages[id][msgId];
     }
@@ -28,7 +26,7 @@ class MessageProvider{
     }
 }
 
-var messages = 
+var messages =
      [
         {text: "Some message", time:""},
         {text: "Some message", time:""}
