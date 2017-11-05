@@ -7,6 +7,7 @@ import GroupProvider from './GroupProvider.js';
 import Footer from './Footer.js';
 import Header from './Header.js';
 import Sidebar from './Sidebar.js'
+import Landing from './Landing.js'
 
 class App extends Component {
   render() {
@@ -15,12 +16,13 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Landing />
         <div className="col-md-3">
           <Sidebar users={group.users} recipes={group.currentRecipes}/>
         </div>
         <div className="col-md-9">
           <GroupInfo host={group.host} time={group.time} />
-          <Recipes recipes={group.currentRecipes}/> 
+          <Recipes recipes={group.currentRecipes}/>
           <Chat currUser={group.host} msgGroup={group.msgRef}/>
         </div>
         <Footer />
