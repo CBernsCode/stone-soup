@@ -37,7 +37,7 @@ class Landing extends Component {
             <div className="row">
             <div className="col-md-8">
               <div id="LandingHeader">Benefits</div> <hr/>
-              <div id="LandingText">Food prep is more fun in groups.</div>
+              <div id="LandingText">Food prep is more fun in groups. Users are also able to enjoy a wider variety of foods. One of the most important aspects of Stone Soup, is developing a healthy community. People will be there to encourage you and keep you on the path towards healthy living. We also believe that over time we can develop highly customized meal plans for even the pickiest among us.</div>
             </div>
               <div className="col-md-4">
                 <img className="img-responsive img-rounded" alt="Image from https://img.buzzfeed.com/" src="https://img.buzzfeed.com/buzzfeed-static/static/2016-08/4/16/campaign_images/buzzfeed-prod-fastlane03/7-easy-ways-to-master-meal-prep-2-9583-1470343498-3_dblbig.jpg" />
@@ -51,7 +51,8 @@ class Landing extends Component {
             <div className="row">
             <div className="col-md-8">
               <div id="LandingHeader">Business Strategy</div> <hr/>
-              <div id="LandingText">This is our plan.</div>
+              <div id="LandingText">We believe that strong corporate partnership is the best for our users. Services like Blue Apron and HelloFresh can play an important role in providing healthy, delicious food for those who want to cook together. We also believe that with this platform we can generate revenue through advertisement of foods and cookware. 
+              </div>
             </div>
               <div className="col-md-4">
                 <img className="img-responsive img-rounded" alt="Image from http://www.youthareawesome.com" src="http://www.youthareawesome.com/wp-content/uploads/2015/03/fruit.jpg" />
