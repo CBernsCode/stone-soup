@@ -1,7 +1,7 @@
 import firebase from './firebase.js'
 
     class GroupProvider{
-        constructor(){     
+        constructor(){
             this.ref = firebase.database().ref('group/')
         }
         getGroup(id){
@@ -19,7 +19,7 @@ import firebase from './firebase.js'
             users: [0,1],
             time: new Date(),
             host: 1,
-            currentRecipes: [0, 1, 2],
+            currentRecipes: [0, 1, 2, 3],
             pastRecipes: [],
             pastMeetings: [],
             msgRef: 0
