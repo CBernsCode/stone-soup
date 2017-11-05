@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Recipes.css'
+import RecipeProvider from './RecipeProvider.js'
 
 var obj = [
   {
@@ -19,19 +20,36 @@ var obj = [
 ]
 
 class Recipes extends Component{
+  constructor() {
+    super();
+    var rProv = new RecipeProvider();
+    this.state = {
+      recipes: []
+    }
+  }
+  componentDidMount(){
+
+    var rProv = new RecipeProvider();
+    rProv.getRecipe("-Ky8MbZFcEOQjBD3dPwV").then((result) => {
+      this.setState({recipe: result})}
+    ).then(() => {console.log(this.state.recipe)}
+  )
+    
+  }
   render(){
-    return (
-      <section  className="col-md-9">
-          <h2>Recipes</h2>
-          <div id="recipes">
-            {this.props.recipes.map((x) => {
-              return (
-                <Recipe img={x.img} name={x.name} ingredients={x.ingredients}/>
-              )
-            })}
-          </div>
-      </section>
-    )
+
+      return (
+        <section  className="col-md-9">
+            <h2>Recipes</h2>
+            <div id="recipes">
+              {this.props.recipes.map((x) => {
+                return (
+                  <Recipe img={x.img} name={x.name} ingredients={x.ingredients}/>
+                )
+              })}
+            </div>
+        </section>
+      )
   }
 }
 
