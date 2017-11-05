@@ -1,22 +1,22 @@
 
-    class UserProvider{
-        getUser(id){
-            return users[id];
-        }
-        sendUser(user){
-            users.push(user);
-        }
-        getAll(){
-            return users;
-        }
-        getUsersByIds(idArr){
-            var retVal = []; 
-            for(var i in idArr){
-                retVal.push(users[i]);
-            }
-            return retVal;
-        }
+class UserProvider{
+    getUser(id){
+        return users[id];
     }
+    sendUser(user){
+        users.push(user);
+    }
+    getAll(){
+        return users;
+    }
+    getUsersByIds(idArr){
+        var retVal = []; 
+        for(var i in idArr){
+            retVal.push(users[i]);
+        }
+        return retVal;
+    }
+}
 
 var users = [
     {

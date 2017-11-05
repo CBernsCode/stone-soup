@@ -22,7 +22,7 @@ class Landing extends Component {
             <span className="align-bottom">
               <div className="row">
                 <div className="col-md-8 text-center">
-                  <button id="LogInButton" type="button" class="btn btn-success btn-lg">Log In</button>
+                  <button id="LogInButton" type="button" class="btn btn-success btn-lg logged-out">Log In</button>
 
                 </div>
                 <div className="col-md-4"></div>

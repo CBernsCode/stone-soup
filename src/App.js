@@ -16,11 +16,13 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Landing />
-        <div className="col-md-3">
+        <div className="logged-out">
+          <Landing />
+        </div>
+        <div className="col-md-3 logged-in">
           <Sidebar users={group.users} recipes={group.currentRecipes}/>
         </div>
-        <div className="col-md-9">
+        <div className="col-md-9 logged-in">
           <GroupInfo host={group.host} time={group.time} />
           <Recipes recipes={group.currentRecipes}/>
           <Chat currUser={group.host} msgGroup={group.msgRef}/>

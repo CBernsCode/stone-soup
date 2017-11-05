@@ -33,9 +33,9 @@ class Recipe extends Component{
       <div className="recipe col-md-6">
         <h4>{this.props.title}</h4>
         Servings: {this.props.servings}
-        <div className="thumbnail">
-          <img  alt={this.props.title} src={this.props.img} />
-        </div>
+        <br />
+          <img className="img-rounded" alt={this.props.title} src={this.props.img} />
+
         <ul>
           {
             this.props.ingredients.map((x) => {

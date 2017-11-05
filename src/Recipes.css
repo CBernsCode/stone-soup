@@ -9,8 +9,10 @@
 
 .recipe {
   padding: 10px;
-  max-width: 250px;
 }
+
 .recipe img{
-  max-width: 100%;
+  max-height: 200px;
+  width: 80%;
+  margin: 1em;
 }

@@ -6,3 +6,6 @@
   color: #388E3C;
 }
 
+.logged-in {
+  display: none;
+}
