@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Chat from './Chat.js';
 import './App.css';
+import UserProvider from './UserProvider.js';
+import MessageProvider from './MessageProvider.js';
+import GroupProvider from './GroupProvider.js';
+
+
+
 
 class App extends Component {
   render() {
+
     return (
       <div className="App">
         <header className="App-header">
