@@ -41,8 +41,9 @@ class Recipe extends Component{
         <ul>
           {
             this.props.ingredients.map((x) => {
+              let value = x.quantity ?  x.quantity : "-"
               return (
-                <li>{x.quantity} {x.name}</li>
+                <li><span class="quant-badge label label-success ">{value}</span> {x.name}</li>
               )
             })
           }

@@ -6,10 +6,10 @@
   color: #388E3C;
 }
 
-/* .logged-in {
+.logged-in {
+  display: none;
+} 
+
+/* .logged-out {
   display: none;
 } */
-
-.logged-out {
-  display: none;
-}

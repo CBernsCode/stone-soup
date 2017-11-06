@@ -16,3 +16,14 @@
 
   display: block;
 }
+.recipe ul {
+  list-style: none;
+  padding-left: 22px;
+}
+
+
+.quant-badge {
+  display: inline-block;
+  width: 35px;
+  margin-right: 4px;
+}

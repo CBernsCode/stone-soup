@@ -4,8 +4,11 @@
 }
 
 .list-group-item > .badge {
-  float: left;
+  float: none;
   margin-right: 1em;
+  display: inline-block;
+  width: 35px;
+  margin-right: 4px;
 }
 @media screen and (max-width: 992px) {
   .list-group {
