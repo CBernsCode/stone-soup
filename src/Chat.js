@@ -37,7 +37,7 @@ class Chat extends Component{
   render(){
     if(this.state.messages){
       return (
-        <div id="chat">
+        <div id="chat" className="clearfix">
           <h2>Chat</h2>
           <ul>
             {
@@ -47,13 +47,13 @@ class Chat extends Component{
           </ul>
           <div class="form-group">
             <form className="form-horizontal" onSubmit={this.handleSubmit}>
-            <label for="chat-input"className="col-sm-3 control-label">
+            <label for="chat-input"className="col-xs-3 control-label">
               Send a Message:
             </label>
-            <div className="col-sm-8 text-box">
+            <div className="col-xs-7 text-box">
               <input  id="chat-input" type="text" value={this.state.value} onChange={this.handleChange} />
             </div>
-            <button type="submit" class="btn btn-success"><i className="glyphicon glyphicon-send"></i></button>
+            <button type="submit" class="btn btn-sm btn-success"><i className="glyphicon glyphicon-send"></i></button>
             </form> 
           </div>
         </div>

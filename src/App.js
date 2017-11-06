@@ -24,8 +24,8 @@ class App extends Component {
         </div>
         <div className="col-md-9 logged-in">
           <GroupInfo host={group.host} time={group.time} />
-          <Recipes recipes={group.currentRecipes}/>
           <Chat currUser={group.host} msgGroup={group.msgRef}/>
+          <Recipes recipes={group.currentRecipes}/>
         </div>
         <Footer />
       </div>

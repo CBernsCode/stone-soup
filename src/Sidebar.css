@@ -7,3 +7,11 @@
   float: left;
   margin-right: 1em;
 }
+@media screen and (max-width: 992px) {
+  .list-group {
+      max-height: 250px;
+      overflow: scroll;
+
+  }
+}
+

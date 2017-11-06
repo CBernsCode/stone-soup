@@ -18,6 +18,7 @@ class Recipes extends Component{
                     <Recipe img={x.img} title={x.title} alt={x.title} ingredients={x.ingredients}
                     instructions={x.instructions}
                     servings={x.servings}/>
+                    
                   )
                 })
               }
@@ -30,12 +31,13 @@ class Recipes extends Component{
 class Recipe extends Component{
   render(){
     return(
-      <div className="recipe col-md-6">
+      <div className="recipe">
+        <div className="col-md-6">
         <h4>{this.props.title}</h4>
-        Servings: {this.props.servings}
-        <br />
-          <img className="img-rounded" alt={this.props.title} src={this.props.img} />
-
+        Servings: {this.props.servings}<br />
+        <img className="img-rounded" alt={this.props.title} src={this.props.img} />
+        </div>
+        <div className="col-md-6">
         <ul>
           {
             this.props.ingredients.map((x) => {
@@ -46,12 +48,13 @@ class Recipe extends Component{
           }
         </ul>
         <ol>
-        {this.props.instructions.map((x) => {
-          return (
-            <li>{x}</li>
-          )
-        })}
+          {
+            this.props.instructions.map((x) => {
+              return ( <li> {x} </li> )
+            })
+          }
         </ol>
+        </div>
       </div>
     )
   }

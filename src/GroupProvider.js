@@ -17,8 +17,8 @@ import firebase from './firebase.js'
         {
             id: 1,
             users: [0,1,2],
-            time: new Date(),
-            host: 1,
+            time: new Date().toDateString() + " " + new Date().toLocaleTimeString(),
+            host: 0,
             currentRecipes: [0, 1, 2, 3],
             pastRecipes: [],
             pastMeetings: [],
