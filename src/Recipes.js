@@ -8,10 +8,9 @@ class Recipes extends Component{
     const rProv = new RecipeProvider();
     var recipes = rProv.getRecipesByIds(this.props.recipes)
     console.log(recipes)
-      return (
-        <section  className="">
-            <h2>Recipes</h2>
-            <div id="recipes">
+      return (     
+        <div id="recipes">
+            <h2> Recipes</h2>
               {
                 recipes.map((x) => {
                   return(
@@ -22,8 +21,7 @@ class Recipes extends Component{
                   )
                 })
               }
-            </div>
-        </section>
+        </div>
       )
   }
 }
@@ -32,12 +30,12 @@ class Recipe extends Component{
   render(){
     return(
       <div className="recipe">
-        <div className="col-md-6">
-        <h4>{this.props.title}</h4>
+        <div className="col-sm-4">
+        <h3>{this.props.title}</h3>
         Servings: {this.props.servings}<br />
         <img className="img-rounded" alt={this.props.title} src={this.props.img} />
         </div>
-        <div className="col-md-6">
+        <div className="col-sm-8">
         <ul>
           {
             this.props.ingredients.map((x) => {

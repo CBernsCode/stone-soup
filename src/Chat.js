@@ -31,7 +31,7 @@ class Chat extends Component{
                         time: items[item].time,
                         user: items[item].user});
       }
-      this.setState({messages: newState});
+      this.setState({messages: newState.reverse()});
     }).bind(this);
   }
   render(){

@@ -7,7 +7,7 @@ class Sidebar extends Component {
   render() {
     return (
       <div id="sidebar">
-        <UserSideBar users={this.props.users} />
+        <UserSideBar users={this.props.users} host={this.props.host}/>
         <IngredientsSideBar recipe={this.props.recipes}/>
       </div>
     )
@@ -20,7 +20,8 @@ class UserSideBar extends Component{
    var users = uProv.getUsersByIds(this.props.users)
     return (
       <div >
-        <h3>Users <span className="small">aka Thunder Buddies</span></h3>
+        <h4> Host: <span className="small">{uProv.getUser(this.props.host).name}</span></h4>
+        <h4>Users: <span className="small">aka Thunder Buddies</span></h4>
         <ul className="list-group ">
           {
             users.map((usr, index) => {

@@ -1,6 +1,6 @@
 #chat {
   text-align: left;
-  border: 1px solid;
+  border: 1px solid #388E3C;
   border-radius: 5px;
   margin-bottom: 1rem;
   padding: 0 2em;
@@ -35,6 +35,6 @@
 }
 
 .form-horizontal{
-  border-top: 1px solid;
+  border-top: 1px solid #388E3C;;
   padding-top: 18px;
 }

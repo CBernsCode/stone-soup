@@ -1,8 +1,9 @@
-.App h2, .App h3 {
+.App h2, .App h3, .App h4 {
   color: #388E3C;
 }
 #group-info{
   padding-right: 1em;
+  padding-top: 10px;
   color: #388E3C;
 }
 

@@ -8,4 +8,9 @@
   text-align: left;
   padding-left: 20px;
   z-index: 1000;
+  
+}
+
+.footer img {
+  margin: 10px;
 }

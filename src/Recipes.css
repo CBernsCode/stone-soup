@@ -1,19 +1,35 @@
 #recipes {
   text-align: left;
-  margin-bottom: 2em;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   flex-flow: wrap;
+  text-align: left;
+  border: 1px solid #388E3C;
+  border-radius: 5px;
+  margin-bottom: 10rem;
+  padding: 0 2em;
+  
 }
 
 .recipe {
   width: 100%;
 }
+@media screen and (min-width: 792px) {
+  .recipe {
+    display: flex;
+    justify-content: baseline;
+    align-items: flex-start
+  }
+}
 
+.recipe:not(:first-child) {
+  border-top: solid 1px #8BC34A; 
+  margin-top: 1em;
+  padding-top: 1em;
+}
 .recipe img{
   max-width: 80%;
-
   display: block;
 }
 .recipe ul {

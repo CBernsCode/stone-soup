@@ -20,7 +20,7 @@ class App extends Component {
           <Landing />
         </div>
         <div className="col-md-3 logged-in">
-          <Sidebar users={group.users} recipes={group.currentRecipes}/>
+          <Sidebar users={group.users} host={group.host} recipes={group.currentRecipes}/>
         </div>
         <div className="col-md-9 logged-in">
           <GroupInfo host={group.host} time={group.time} />
@@ -34,19 +34,10 @@ class App extends Component {
 }
 
 class GroupInfo extends Component {
-  constructor() {
-    super();
-    this.getHost = this._getHost.bind(this);
-  }
-  _getHost(){
-    var uProv = new UserProvider();
-    return (<h4>Host: {uProv.getUser(this.props.host).name}</h4>)
-  }
   render(){
     return (
       <div id="group-info">
-        <h3>Next Soup Group: {this.props.time.toString()}</h3>
-        {this.getHost()}
+        <h3>Next Soup Group: <span>{this.props.time.toString()}</span></h3>
       </div>
     )
   }
