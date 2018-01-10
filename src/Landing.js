@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import "./Landing.css";
+import "./css/Landing.css";
 import Footer from './Footer.js';
-import Header from './Header.js';
 
 class Landing extends Component {
   render() {

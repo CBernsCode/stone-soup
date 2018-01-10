@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import Chat from './Chat.js';
 import Recipes from './Recipes.js';
-import './App.css';
-import UserProvider from './UserProvider.js';
+import './css/App.css';
 import GroupProvider from './GroupProvider.js';
 import Footer from './Footer.js';
 import Header from './Header.js';
 import Sidebar from './Sidebar.js'
-import Landing from './Landing.js'
 
 class App extends Component {
   render() {
@@ -16,13 +14,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <div className="logged-out">
-          <Landing />
-        </div>
-        <div className="col-md-3 logged-in">
+        <div className="col-md-3">
           <Sidebar users={group.users} host={group.host} recipes={group.currentRecipes}/>
         </div>
-        <div className="col-md-9 logged-in">
+        <div className="col-md-9">
           <GroupInfo host={group.host} time={group.time} />
           <Chat currUser={group.host} msgGroup={group.msgRef}/>
           <Recipes recipes={group.currentRecipes}/>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.png';
-import './Footer.css';
+import './css/Footer.css';
 
 var style = {
   fontFamily: "Lobster Two",

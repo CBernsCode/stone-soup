@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MessageProvider from './MessageProvider.js'
 import firebase from './firebase.js'
-import './Chat.css';
+import './css/Chat.css';
 
 
 class Chat extends Component{
@@ -45,15 +45,15 @@ class Chat extends Component{
                 return(<Message key={x.key} time={x.time} msg={x.text} user={x.user} />)
             })}
           </ul>
-          <div class="form-group">
+          <div className="form-group">
             <form className="form-horizontal" onSubmit={this.handleSubmit}>
-            <label for="chat-input"className="col-xs-3 control-label">
+            <label className="col-xs-3 control-label">
               Send a Message:
             </label>
             <div className="col-xs-7 text-box">
               <input  id="chat-input" type="text" value={this.state.value} onChange={this.handleChange} />
             </div>
-            <button type="submit" class="btn btn-sm btn-success"><i className="glyphicon glyphicon-send"></i></button>
+            <button type="submit" className="btn btn-sm btn-success"><i className="glyphicon glyphicon-send"></i></button>
             </form> 
           </div>
         </div>
@@ -72,8 +72,7 @@ class Chat extends Component{
             </label>
             <input type="submit" value="Submit" />
           </form> 
-          </div>
-          
+          </div>         
           </div>
         </section>
       )
@@ -83,7 +82,6 @@ class Chat extends Component{
 
 class Message extends Component{
   render(){
-    
     return(
       <li data={this.props.time}>{this.props.user}: {this.props.msg}
         <br/> <span className="chatTimeStamp"> {this.props.time}</span>

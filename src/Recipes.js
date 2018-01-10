@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Recipes.css'
+import './css/Recipes.css'
 import RecipeProvider from './RecipeProvider.js'
 
 class Recipes extends Component{
@@ -12,9 +12,9 @@ class Recipes extends Component{
         <div id="recipes">
             <h2> Recipes</h2>
               {
-                recipes.map((x) => {
+                recipes.map((x, index) => {
                   return(
-                    <Recipe img={x.img} title={x.title} alt={x.title} ingredients={x.ingredients}
+                    <Recipe key={index} img={x.img} title={x.title} alt={x.title} ingredients={x.ingredients}
                     instructions={x.instructions}
                     servings={x.servings}/>
                     
@@ -38,10 +38,10 @@ class Recipe extends Component{
         <div className="col-sm-8">
         <ul>
           {
-            this.props.ingredients.map((x) => {
+            this.props.ingredients.map((x, index) => {
               let value = x.quantity ?  x.quantity : "-"
               return (
-                <li><span class="quant-badge label label-success ">{value}</span> {x.name}</li>
+                <li key={index}><span className="quant-badge label label-success ">{value}</span> {x.name}</li>
               )
             })
           }
@@ -49,7 +49,7 @@ class Recipe extends Component{
         <ol>
           {
             this.props.instructions.map((x) => {
-              return ( <li> {x} </li> )
+              return ( <li key={x.toString()}> {x} </li> )
             })
           }
         </ol>

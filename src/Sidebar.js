@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import UserProvider from './UserProvider.js'
 import RecipeProvider from './RecipeProvider.js'
-import './Sidebar.css';
+import './css/Sidebar.css';
 
 class Sidebar extends Component {
   render() {
@@ -26,7 +26,7 @@ class UserSideBar extends Component{
           {
             users.map((usr, index) => {
               return (
-                <User key={index} name={usr.name} />
+                <User key={index } name={usr.name} />
               )
             })
           }
@@ -39,7 +39,7 @@ class UserSideBar extends Component{
 class User extends Component {
   render() {
     return (
-      <li className="list-group-item" key={this.props.key} > {this.props.name}</li>
+      <li className="list-group-item" > {this.props.name}</li>
     )
   }
 }
@@ -63,9 +63,9 @@ class IngredientsSideBar extends Component{
         <h3>Shopping List</h3>
         <ul className="list-group "> 
           {
-            list.map((x) => {
+            list.map((x, index) => {
               return(
-                <ShoppingItem quantity={x.quantity} name={x.name} />
+                <ShoppingItem key={index} quantity={x.quantity} name={x.name} />
               )
             })
           }
@@ -78,7 +78,7 @@ class IngredientsSideBar extends Component{
 class ShoppingItem extends Component{
   render(){
     return (
-      <li className="list-group-item"><span class="badge">{this.props.quantity}</span>{this.props.name}</li> 
+      <li className="list-group-item"><span className="badge">{this.props.quantity}</span>{this.props.name}</li> 
     )
   }
 }
